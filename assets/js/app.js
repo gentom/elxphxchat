@@ -20,7 +20,7 @@ import "phoenix_html"
 
 import socket from "./socket"
 
-let channel = socket.channel("lobby", {});
+let channel = socket.channel("talk", {});
 let list    = $('#message-list');
 let message = $('#message');
 let name    = $('#name');
