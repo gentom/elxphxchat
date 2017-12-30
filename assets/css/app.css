@@ -1,19 +1,26 @@
 /* This file is for your main application css. */
-#message-list {
+#msgList {
     border: 3px solid rgb(96, 1, 160);
     height: 400px;
     padding: 10px;
     overflow: scroll;
     margin-bottom: 50px;
     background: rgb(211, 211, 211);
+    color: rgb(90, 44, 255);
+}
+
+.header h1 {
+    color: rgb(96, 1, 160);
 }
 
 .col-md-3 input {
     border: 3px solid rgb(96, 1, 160);
     background: rgb(211, 211, 211);
+    color: rgb(90, 44, 255);
 }
 
 .col-md-9 input {
     border: 3px solid rgb(96, 1, 160);
     background: rgb(211, 211, 211);
+    color: rgb(90, 44, 255);
 }

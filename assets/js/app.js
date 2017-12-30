@@ -3,19 +3,19 @@ import "phoenix_html"
 import socket from "./socket"
 
 let channel = socket.channel("talk", {});
-let list    = $('#message-list');
-let message = $('#message');
-let name    = $('#name');
+let list    = $('#msgList');
+let msg = $('#msg');
+let name    = $('#usrname');
 
-message.on('keypress', event => {
+msg.on('keypress', event => {
   if (event.keyCode == 13) {
-    channel.push('new_message', { name: name.val(), message: message.val() });
-    message.val('');
+    channel.push('new_message', { name: name.val(), msg: msg.val() });
+    msg.val('');
   }
 });
 
 channel.on('new_message', payload => {
-  list.append(`<b>${payload.name || 'Anonymous'}:</b> ${payload.message}<br>`);
+  list.append(`<b>${payload.name || 'Anonymous'}:</b> ${payload.msg}<br>`);
   list.prop({scrollTop: list.prop("scrollHeight")});
 });
 
